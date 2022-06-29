@@ -1,12 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Thunderbite;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Thunderbite\Commands\TBUserInvite;
+use Thunderbite\Commands\TBUserRemove;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class TBUserServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +17,9 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('thunderbite-users')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasCommand(TBUserInvite::class)
+            ->hasCommand(TBUserRemove::class);
     }
 }
