@@ -1,6 +1,5 @@
 # Thunderbite Users
 
----
 Manage internal users for Thunderbite easily with cli
 
 ## Installation
@@ -28,7 +27,7 @@ composer require thunderbite/thunderbite-users
 ### Invite new user
 
 ```bash
-php artisan thunderbite:user-invite --rohan="Rohan Sakhale" --email="rohan@thunderbite.com" --level="Admin"
+php artisan thunderbite:user-invite --name="Rohan Sakhale" --email="rohan@thunderbite.com" --level="Admin"
 ```
 
 ### Remove existing user
